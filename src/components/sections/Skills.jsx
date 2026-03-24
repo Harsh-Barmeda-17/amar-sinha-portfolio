@@ -59,9 +59,10 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-6 font-['Fredoka']">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-4 font-['Playfair_Display',serif]">
             Technical Expertise
           </h2>
+          <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full"></div>
         </motion.div>
 
         {categories.map((category, catIndex) => (
@@ -70,7 +71,7 @@ const Skills = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-              className="text-2xl sm:text-3xl font-semibold text-white mb-6 sm:mb-8 font-['Fredoka'] text-left"
+              className="text-2xl sm:text-3xl font-semibold text-white mb-6 sm:mb-8 font-['Playfair_Display',serif] text-left"
             >
               {category}
             </motion.h3>
@@ -98,7 +99,7 @@ const Skills = () => {
                             className="text-4xl sm:text-5xl transition-all duration-300 group-hover:scale-110" 
                             style={{ color: skill.color }}
                           />
-                          <span className="text-sm sm:text-base font-medium text-gray-400 group-hover:text-white transition-colors text-center">
+                          <span className={`text-sm sm:text-base font-medium text-gray-400 group-hover:text-white transition-colors text-center font-['Roboto_Slab',serif]`}>
                             {skill.name}
                           </span>
                         </div>

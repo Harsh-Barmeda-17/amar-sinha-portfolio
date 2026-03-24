@@ -14,10 +14,10 @@ const Contact = () => {
   });
 
   const socialLinks = [
-    { icon: Github, href: portfolioData.socialLinks.github, label: 'GitHub' },
-    { icon: Linkedin, href: portfolioData.socialLinks.linkedin, label: 'LinkedIn' },
+    { icon: Github, href: "https://github.com/amarcrj", label: 'GitHub' },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/amarcrj/", label: 'LinkedIn' },
     { icon: BookOpen, href: portfolioData.socialLinks.googleScholar, label: 'Google Scholar' },
-    { icon: Globe, href: "https://amarsinha.com", label: 'Website' },
+    { icon: Globe, href: "https://amarsinha.in", label: 'Website' },
   ];
 
   const contactInfo = [
@@ -36,10 +36,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-6 font-['Fredoka']">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-4 font-['Playfair_Display',serif]">
             Get in Touch
           </h2>
-          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full mb-4"></div>
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto font-['Roboto_Slab',serif]">
             Open to research collaborations, speaking opportunities, and discussions about B5G networks and AI/ML.
           </p>
         </motion.div>
@@ -54,17 +55,17 @@ const Contact = () => {
             className="flex-1"
           >
             <div className="bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all h-full">
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-6 font-['Fredoka']">Contact Info</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4 font-['Playfair_Display',serif]">Contact Info</h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-all">
                     <info.icon className="w-5 h-5 text-teal-500 flex-shrink-0" />
                     {info.href ? (
-                      <a href={info.href} className="text-gray-300 hover:text-white transition-colors text-base sm:text-lg break-all">
+                      <a href={info.href} className="text-gray-300 hover:text-white transition-colors text-base sm:text-lg break-all font-['Roboto_Slab',serif]">
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-gray-300 text-base sm:text-lg">{info.value}</p>
+                      <p className="text-gray-300 text-base sm:text-lg font-['Roboto_Slab',serif]">{info.value}</p>
                     )}
                   </div>
                 ))}
@@ -80,7 +81,7 @@ const Contact = () => {
             className="flex-1"
           >
             <div className="bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all h-full">
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-6 font-['Fredoka']">Connect with me</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4 font-['Playfair_Display',serif]">Connect with me</h3>
               <div className="grid grid-cols-2 gap-3">
                 {socialLinks.map((social, index) => (
                   <a
@@ -91,7 +92,7 @@ const Contact = () => {
                     className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-all group"
                   >
                     <social.icon className="w-5 h-5 text-teal-500 group-hover:text-teal-400" />
-                    <span className="text-sm sm:text-base text-gray-400 group-hover:text-white transition-colors">
+                    <span className="text-sm sm:text-base text-gray-400 group-hover:text-white transition-colors font-['Roboto_Slab',serif]">
                       {social.label}
                     </span>
                     <ExternalLink className="w-3 h-3 ml-auto text-gray-600" />

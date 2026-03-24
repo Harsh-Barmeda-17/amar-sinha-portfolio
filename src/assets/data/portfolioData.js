@@ -7,11 +7,9 @@ export const portfolioData = {
   location: "IIIT Naya Raipur, Chhattisgarh, India",
   
   socialLinks: {
-    github: "https://github.com/amarsinha",
-    linkedin: "https://linkedin.com/in/amarsinha",
-    twitter: "https://twitter.com/amarsinha",
+    github: "https://github.com/amarcrj",
+    linkedin: "https://www.linkedin.com/in/amarcrj/",
     googleScholar: "https://scholar.google.com/citations?user=yourprofile",
-    researchGate: "https://www.researchgate.net/profile/Amar-Sinha",
     email: "mailto:amar@iiitnr.edu.in"
   },
 

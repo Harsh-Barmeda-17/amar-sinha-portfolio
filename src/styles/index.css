@@ -4,7 +4,11 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-gray-300 font-['Roboto_Slab',serif];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
   }
 }
 
@@ -49,19 +53,15 @@
   }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-::-webkit-scrollbar-track {
-  @apply bg-gray-900;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-purple-600 to-blue-600 rounded-full;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-purple-700;
+/* Subtle Teal Border Glow Animation */
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(20, 184, 166, 0.3);
+    box-shadow: 0 0 0px 0px rgba(20, 184, 166, 0);
+  }
+  50% {
+    border-color: rgba(20, 184, 166, 0.8);
+    box-shadow: 0 0 6px 2px rgba(20, 184, 166, 0.2);
+  }
 }

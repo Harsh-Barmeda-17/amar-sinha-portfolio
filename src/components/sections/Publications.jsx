@@ -28,9 +28,10 @@ const Publications = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-6 font-['Fredoka']">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-4 font-['Playfair_Display',serif]">
             Publications & Patents
           </h2>
+          <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full"></div>
         </motion.div>
 
         {/* Tabs */}
@@ -39,7 +40,7 @@ const Publications = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-5 sm:px-6 py-2.5 rounded-lg text-sm sm:text-base font-medium transition-all ${
+              className={`px-5 sm:px-6 py-2.5 rounded-lg text-sm sm:text-base font-medium transition-all font-['Roboto_Slab',serif] ${
                 activeTab === tab.id
                   ? 'bg-teal-500 text-white'
                   : 'bg-gray-800 text-gray-400 hover:text-white border border-gray-700'
@@ -61,7 +62,7 @@ const Publications = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all"
             >
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 leading-relaxed">{pub.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 leading-relaxed font-['Roboto_Slab',serif]">{pub.title}</h3>
               <p className="text-gray-400 text-sm sm:text-base mb-2">{pub.authors}</p>
               <p className="text-gray-500 text-sm sm:text-base mb-3">{pub.journal}, {pub.year}</p>
               <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 rounded-lg text-xs sm:text-sm font-medium">

@@ -20,9 +20,10 @@ const Teaching = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-6 font-['Fredoka']">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-4 font-['Playfair_Display',serif]">
             Academic Teaching
           </h2>
+          <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -35,12 +36,12 @@ const Teaching = () => {
           >
             <div className="flex items-center mb-6">
               <GraduationCap className="w-7 h-7 text-teal-500 mr-3" />
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white font-['Fredoka']">Undergraduate</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-white font-['Playfair_Display',serif]">Undergraduate</h3>
             </div>
             <div className="space-y-5">
               {portfolioData.teaching.undergraduate.map((course, index) => (
                 <div key={index} className="border-b border-gray-800 pb-4 last:border-0">
-                  <p className="text-lg sm:text-xl font-semibold text-teal-500 mb-1">
+                  <p className="text-lg sm:text-xl font-semibold text-teal-500 mb-1 font-['Roboto_Slab',serif]">
                     {course.code}: {course.name}
                   </p>
                   <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
@@ -60,7 +61,7 @@ const Teaching = () => {
           >
             <div className="flex items-center mb-6">
               <BookOpen className="w-7 h-7 text-teal-500 mr-3" />
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white font-['Fredoka']">Postgraduate</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-white font-['Playfair_Display',serif]">Postgraduate</h3>
             </div>
             <div className="space-y-5">
               {portfolioData.teaching.postgraduate.map((course, index) => (

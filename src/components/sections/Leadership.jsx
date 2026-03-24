@@ -20,9 +20,10 @@ const Leadership = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-6 font-['Fredoka']">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-4 font-['Playfair_Display',serif]">
             Community Impact
           </h2>
+          <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -40,7 +41,7 @@ const Leadership = () => {
                   <div className="flex items-start gap-3">
                     <Users className="w-6 h-6 text-teal-500 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-semibold text-white">{role.role}</h3>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-white font-['Roboto_Slab',serif]">{role.role}</h3>
                       <p className="text-teal-500 text-base sm:text-lg mt-1">{role.organization}</p>
                     </div>
                   </div>
@@ -70,7 +71,7 @@ const Leadership = () => {
           >
             <div className="flex items-center mb-6">
               <Shield className="w-7 h-7 text-teal-500 mr-3" />
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white font-['Fredoka']">Professional Memberships</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-white font-['Playfair_Display',serif]">Professional Memberships</h3>
             </div>
             <div className="grid grid-cols-1 gap-3">
               {portfolioData.memberships.map((membership, index) => (

@@ -9,6 +9,7 @@ import Skills from './components/sections/Skills';
 import Teaching from './components/sections/Teaching';
 import Leadership from './components/sections/Leadership';
 import Contact from './components/sections/Contact';
+import FloatingNavButton from './components/ui/FloatingNavButton';
 
 const App = () => {
   useEffect(() => {
@@ -28,7 +29,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-black text-gray-300 min-h-screen font-['Nunito',sans-serif]">
+    <div className="bg-black text-gray-300 min-h-screen font-['Roboto_Slab',serif]">
       <Navbar />
       <main>
         <Hero />
@@ -42,10 +43,11 @@ const App = () => {
         <Contact />
       </main>
       
-      <footer className="py-6 text-center text-gray-600 border-t border-gray-800 text-sm">
+      <footer className="py-6 text-center text-gray-600 border-t border-gray-800 text-sm font-['Roboto_Slab',serif]">
         <p>© 2026 Amar Sinha. All rights reserved.</p>
         <p className="text-xs mt-1">Designed with passion for research</p>
       </footer>
+      <FloatingNavButton />
     </div>
   );
 };

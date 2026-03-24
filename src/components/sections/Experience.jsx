@@ -20,9 +20,10 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-6 font-['Fredoka']">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 mb-4 font-['Playfair_Display',serif]">
             Work Experience
           </h2>
+          <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
@@ -36,8 +37,8 @@ const Experience = () => {
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white">{exp.title}</h3>
-                  <p className="text-teal-500 text-base sm:text-lg mt-1">{exp.company}</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white font-['Roboto_Slab',serif]">{exp.title}</h3>
+                 <p className="text-teal-500 text-base sm:text-lg mt-1 font-['Roboto_Slab',serif]">{exp.company}</p>
                 </div>
                 <div className="flex items-center text-gray-500 text-sm">
                   <Calendar className="w-4 h-4 mr-1" />

@@ -135,13 +135,13 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Mobile Navbar */}
+      {/* Mobile Navbar - Fixed and Centered */}
       {isMobile ? (
-        <div className="fixed z-[99] top-5 left-0 right-0 flex justify-center w-full mr-[-50px]">
+        <div className="fixed z-[99] top-5 left-1/2 -translate-x-1/2 w-[90%] max-w-[320px]">
           <nav
             ref={navRef}
             className="block h-[70px] rounded-2xl shadow-2xl relative overflow-hidden will-change-[height]"
-            style={{ background: 'rgba(0,0,0,0.9)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.1)', width: '85%', maxWidth: '350px' }}
+            style={{ background: 'rgba(0,0,0,0.9)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.1)' }}
           >
             <div className="absolute inset-x-0 top-0 h-[70px] flex items-center justify-between px-3 z-[2]">
               {/* Hamburger Menu Button */}
@@ -157,7 +157,7 @@ const Navbar = () => {
 
               {/* Center - Amar Sinha */}
               <div className="absolute left-1/2 transform -translate-x-1/2">
-                <span className="text-xs font-bold text-white font-['Fredoka'] whitespace-nowrap">
+                <span className="text-base font-bold text-white font-['Playfair_Display',serif] whitespace-nowrap">
                   Amar Sinha
                 </span>
               </div>
@@ -165,7 +165,7 @@ const Navbar = () => {
               {/* Resume Button */}
               <a
                 href="/resume.pdf"
-                className="inline-flex border border-white/20 rounded-full px-2.5 py-1 text-[10px] font-medium text-white hover:bg-white hover:text-black transition-all duration-300"
+                className="inline-flex border border-white/20 rounded-full px-2.5 py-1 text-[10px] font-medium text-white hover:bg-white hover:text-black transition-all duration-300 font-['Roboto_Slab',serif]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -188,14 +188,14 @@ const Navbar = () => {
                   ref={setCardRef(idx)}
                   style={{ background: item.bgColor, color: item.textColor, backdropFilter: 'blur(10px)' }}
                 >
-                  <div className="text-base font-semibold tracking-tight">
+                  <div className="text-base font-semibold tracking-tight font-['Playfair_Display',serif]">
                     {item.label}
                   </div>
                   <div className="mt-auto flex flex-col gap-1">
                     {item.links?.map((lnk, i) => (
                       <a
                         key={`${lnk.label}-${i}`}
-                        className="inline-flex items-center gap-1 no-underline cursor-pointer transition-all duration-300 hover:translate-x-1 text-[11px]"
+                        className="inline-flex items-center gap-1 no-underline cursor-pointer transition-all duration-300 hover:translate-x-1 text-[11px] font-['Roboto_Slab',serif]"
                         href={lnk.href}
                         aria-label={lnk.ariaLabel}
                         onClick={(e) => handleLinkClick(e, lnk.href)}
@@ -211,8 +211,8 @@ const Navbar = () => {
           </nav>
         </div>
       ) : (
-        /* Desktop Navbar */
-        <div className="fixed z-[99] top-8 left-1/2 -translate-x-1/2 w-[95%] max-w-[1100px]">
+        /* Desktop Navbar - Fixed and Centered */
+        <div className="fixed z-[99] top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-[900px]">
           <nav
             ref={navRef}
             className="block h-[70px] rounded-2xl shadow-2xl relative overflow-hidden will-change-[height]"
@@ -232,7 +232,7 @@ const Navbar = () => {
 
               {/* Center - Amar Sinha */}
               <div className="absolute left-1/2 transform -translate-x-1/2">
-                <span className="text-2xl font-bold text-white font-['Fredoka']">
+                <span className="text-xl font-bold text-white font-['Playfair_Display',serif] whitespace-nowrap">
                   Amar Sinha
                 </span>
               </div>
@@ -240,7 +240,7 @@ const Navbar = () => {
               {/* Resume Button */}
               <a
                 href="/resume.pdf"
-                className="inline-flex border border-white/20 rounded-full px-5 py-2 text-sm font-medium text-white hover:bg-white hover:text-black transition-all duration-300"
+                className="inline-flex border border-white/20 rounded-full px-5 py-2 text-sm font-medium text-white hover:bg-white hover:text-black transition-all duration-300 font-['Roboto_Slab',serif]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -263,14 +263,14 @@ const Navbar = () => {
                   ref={setCardRef(idx)}
                   style={{ background: item.bgColor, color: item.textColor, backdropFilter: 'blur(10px)' }}
                 >
-                  <div className="text-2xl font-semibold tracking-tight">
+                  <div className="text-2xl font-semibold tracking-tight font-['Playfair_Display',serif]">
                     {item.label}
                   </div>
                   <div className="mt-auto flex flex-col gap-2">
                     {item.links?.map((lnk, i) => (
                       <a
                         key={`${lnk.label}-${i}`}
-                        className="inline-flex items-center gap-2 no-underline cursor-pointer transition-all duration-300 hover:translate-x-1 text-base"
+                        className="inline-flex items-center gap-2 no-underline cursor-pointer transition-all duration-300 hover:translate-x-1 text-base font-['Roboto_Slab',serif]"
                         href={lnk.href}
                         aria-label={lnk.ariaLabel}
                         onClick={(e) => handleLinkClick(e, lnk.href)}

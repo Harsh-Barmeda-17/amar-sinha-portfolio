@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import BlurText from '../ui/BlurText';
-import RotatingText from '../ui/RotatingText';
 import LightRays from '../ui/LightRays';
+import CircularText from '../ui/CircularText';
 import { Mail, Linkedin, Github, Globe } from 'lucide-react';
 import { portfolioData } from '../../assets/data/portfolioData';
 
 const Hero = () => {
-  const rotatingTexts = ['Ph.D. Researcher', 'AI/ML Engineer'];
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-24 sm:pt-28 md:pt-32 relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-24 sm:pt-28 md:pt-32 relative overflow-hidden">
       {/* LightRays Effect - Constant light with mouse follow */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <LightRays
@@ -42,52 +41,72 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
-          {/* Profile Image with Glow */}
-          <div className="relative flex items-center justify-center mb-10 sm:mb-12 md:mb-14">
-            <div className="absolute inset-0 rounded-full bg-teal-500/20 blur-xl"></div>
-            <img 
-              src="/profile.jpg" 
-              alt="Amar Sinha" 
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-2 border-gray-700 relative z-10"
-            />
-          </div>
+          {/* Profile Image with Circular Text */}
+<div className="relative flex items-center justify-center mb-10 sm:mb-12 md:mb-14 mt-4 sm:mt-6 md:mt-8">
+  <div className="absolute inset-0 rounded-full bg-teal-500/20 blur-xl"></div>
+  <div className="relative">
+    <img 
+      src="/profile.jpg" 
+      alt="Amar Sinha" 
+      className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover border-2 border-gray-700 relative z-10"
+    />
+    {/* Circular Text Around Profile Image - Separate Mobile & Desktop Positioning */}
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+  {/* Mobile Position */}
+  <div className="block sm:hidden">
+    <div className="relative w-[180px] h-[180px] -translate-y-0.2">
+      <CircularText
+        text=" Ph.D.Researcher • AI/ML Engineer •"
+        onHover="speedUp"
+        spinDuration={20}
+        className="w-full h-full"
+      />
+    </div>
+  </div>
+  
+  {/* Desktop Position */}
+  <div className="hidden sm:block">
+    <div className="relative w-[260px] h-[260px] md:w-[300px] md:h-[300px] translate-y-2 md:translate-y-5">
+      <CircularText
+        text=" Ph.D.Researcher • AI/ML Engineer •"
+        onHover="speedUp"
+        spinDuration={20}
+        className="w-full h-full"
+      />
+    </div>
+  </div>
+</div>
+    
+  </div>
+</div>
 
           {/* Name with Hi, I'm - Single Line */}
           <div className="mb-4 sm:mb-5 flex flex-wrap justify-center items-baseline">
-            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-400 font-['Fredoka']">Hi, I'm </span>
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-400 font-['Roboto_Slab',serif]">Hi, I'm </span>
             <BlurText
               text=" Amar Sinha"
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-teal-500 font-['Fredoka'] inline-block"
-            />
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-teal-500 font-['Playfair_Display',serif] inline-block"
+  />
           </div>
 
-          {/* Title - Rotating Text with Flip Animation */}
-          <div className="mb-6 sm:mb-8">
-            <RotatingText
-              texts={rotatingTexts}
-              mainClassName="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-medium bg-teal-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full inline-flex items-center justify-center"
-              rotationInterval={2500}
-              splitBy="words"
-              transition={{ duration: 0.6, ease: "easeInOut" }}
-              initial={{ opacity: 0, rotateX: -90 }}
-              animate={{ opacity: 1, rotateX: 0 }}
-              exit={{ opacity: 0, rotateX: 90 }}
-            />
-          </div>
-
-          {/* Bio */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4"
-          >
-            Innovative researcher specializing in Beyond 5G Networks, Software-Defined Networking, 
-            and AI-driven Solutions for next-generation wireless communication.
-          </motion.p>
+          {/* Bio with Highlighted Text */}
+<motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4 font-['Roboto_Slab',serif]"
+>
+  Innovative researcher specializing in{' '}
+  <span className="text-teal-500 font-semibold">Beyond 5G Networks</span>
+  {', '}
+  <span className="text-teal-500 font-semibold">Software-Defined Networking</span>
+  {', and '}
+  <span className="text-teal-500 font-semibold">AI-driven Solutions</span>
+  {' for next-generation wireless communication.'}
+</motion.p>
 
           {/* Contact Icons */}
           <motion.div
@@ -122,7 +141,7 @@ const Hero = () => {
               <Github className="w-6 h-6 sm:w-7 sm:h-7" />
             </a>
             <a
-              href="https://amarsinha.com"
+              href="https://amarsinha.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-teal-500 transition-colors duration-300"

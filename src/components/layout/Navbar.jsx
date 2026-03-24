@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import React, { useLayoutEffect, useRef, useState, useEffect, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
 
@@ -42,26 +42,23 @@ const Navbar = () => {
     }
   ];
 
-  // Check screen size on mount and when window resizes
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
+
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    
+
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
-  const calculateHeight = () => {
-    if (isMobile) {
-      return 720;
-    }
-    return 320;
-  };
+  const calculateHeight = useCallback(() => {
+    return isMobile ? 720 : 320;
+  }, [isMobile]);
 
-  const createTimeline = () => {
+  // ✅ FIX: memoized function
+  const createTimeline = useCallback(() => {
     const navEl = navRef.current;
     if (!navEl) return null;
 
@@ -71,7 +68,7 @@ const Navbar = () => {
     const tl = gsap.timeline({ paused: true });
 
     tl.to(navEl, {
-      height: calculateHeight,
+      height: calculateHeight(),
       duration: 0.35,
       ease: "power2.inOut"
     });
@@ -85,17 +82,18 @@ const Navbar = () => {
     }, '-=0.15');
 
     return tl;
-  };
+  }, [calculateHeight]);
 
   useLayoutEffect(() => {
     const tl = createTimeline();
     tlRef.current = tl;
     return () => tl?.kill();
-  }, [isMobile]);
+  }, [createTimeline]); // ✅ safe now
 
   const toggleMenu = () => {
     const tl = tlRef.current;
     if (!tl) return;
+
     if (!isExpanded) {
       setIsExpanded(true);
       tl.play(0);
@@ -106,12 +104,8 @@ const Navbar = () => {
   };
 
   const handleLinkClick = (e, href) => {
-    // Close the menu
-    if (isExpanded) {
-      toggleMenu();
-    }
-    
-    // If it's a hash link, scroll smoothly
+    if (isExpanded) toggleMenu();
+
     if (href.startsWith('#')) {
       e.preventDefault();
       const element = document.querySelector(href);
@@ -125,12 +119,8 @@ const Navbar = () => {
     if (el) cardsRef.current[i] = el;
   };
 
-  // Get the appropriate height style based on screen size
   const getContentHeight = () => {
-    if (isMobile) {
-      return 'calc(100% - 150px)';
-    }
-    return 'calc(100% - 70px)';
+    return isMobile ? 'calc(100% - 150px)' : 'calc(100% - 70px)';
   };
 
   return (

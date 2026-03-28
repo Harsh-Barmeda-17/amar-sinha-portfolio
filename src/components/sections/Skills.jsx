@@ -99,7 +99,7 @@ const Skills = () => {
                             className="text-4xl sm:text-5xl transition-all duration-300 group-hover:scale-110" 
                             style={{ color: skill.color }}
                           />
-                          <span className={`text-sm sm:text-base font-medium text-gray-400 group-hover:text-white transition-colors text-center font-['Roboto_Slab',serif]`}>
+                          <span className={`text-sm sm:text-base font-medium text-gray-400 group-hover:text-white transition-colors text-center font-['Inter',serif]`}>
                             {skill.name}
                           </span>
                         </div>

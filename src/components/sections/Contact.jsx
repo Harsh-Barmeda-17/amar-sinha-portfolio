@@ -40,7 +40,7 @@ const Contact = () => {
             Get in Touch
           </h2>
           <div className="w-20 h-1 bg-teal-500 mx-auto rounded-full mb-4"></div>
-          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto font-['Roboto_Slab',serif]">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto font-['Inter',serif]">
             Open to research collaborations, speaking opportunities, and discussions about B5G networks and AI/ML.
           </p>
         </motion.div>
@@ -61,11 +61,11 @@ const Contact = () => {
                   <div key={index} className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-all">
                     <info.icon className="w-5 h-5 text-teal-500 flex-shrink-0" />
                     {info.href ? (
-                      <a href={info.href} className="text-gray-300 hover:text-white transition-colors text-base sm:text-lg break-all font-['Roboto_Slab',serif]">
+                      <a href={info.href} className="text-gray-300 hover:text-white transition-colors text-base sm:text-lg break-all font-['Inter',serif]">
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-gray-300 text-base sm:text-lg font-['Roboto_Slab',serif]">{info.value}</p>
+                      <p className="text-gray-300 text-base sm:text-lg font-['Inter',serif]">{info.value}</p>
                     )}
                   </div>
                 ))}
@@ -92,7 +92,7 @@ const Contact = () => {
                     className="flex items-center gap-3 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-all group"
                   >
                     <social.icon className="w-5 h-5 text-teal-500 group-hover:text-teal-400" />
-                    <span className="text-sm sm:text-base text-gray-400 group-hover:text-white transition-colors font-['Roboto_Slab',serif]">
+                    <span className="text-sm sm:text-base text-gray-400 group-hover:text-white transition-colors font-['Inter',serif]">
                       {social.label}
                     </span>
                     <ExternalLink className="w-3 h-3 ml-auto text-gray-600" />

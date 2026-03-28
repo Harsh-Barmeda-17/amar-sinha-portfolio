@@ -82,17 +82,17 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className={`text-left ${isMobile ? 'px-1' : 'px-2 sm:px-0'}`}
           >
-           <p className={`text-gray-300 leading-relaxed mb-3 font-['Roboto_Slab',serif] ${isMobile ? 'text-sm' : 'text-base sm:text-lg md:text-xl'}`}>
+           <p className={`text-gray-300 leading-relaxed mb-3 font-['Inter',serif] ${isMobile ? 'text-sm' : 'text-base sm:text-lg md:text-xl'}`}>
               I'm an innovative researcher with expertise in <span className="text-teal-400 font-semibold">Beyond 5G (B5G) mobile networks</span>, 
               <span className="text-teal-400 font-semibold"> Software-Defined Networking (SDN)</span>, <span className="text-teal-400 font-semibold">AI-driven handover decision-making algorithms</span>, 
               and wireless network simulations.
             </p>
-            <p className={`text-gray-300 leading-relaxed mb-3 ${isMobile ? 'text-sm' : 'text-base sm:text-lg md:text-xl'}`}>
+            <p className={`text-gray-300 leading-relaxed mb-3 font-['Inter',serif] ${isMobile ? 'text-sm' : 'text-base sm:text-lg md:text-xl'}`}>
               With a proven track record in developing <span className="text-teal-400 font-semibold">Mininet WiFi-based testbeds</span>, applying <span className="text-teal-400 font-semibold">learning models 
               for mobility management</span>, and enhancing overall network performance, I bridge the gap between 
               theoretical research and practical implementation.
             </p>
-            <p className={`text-gray-300 leading-relaxed ${isMobile ? 'text-sm' : 'text-base sm:text-lg md:text-xl'}`}>
+            <p className={`text-gray-300 leading-relaxed font-['Inter',serif] ${isMobile ? 'text-sm' : 'text-base sm:text-lg md:text-xl'}`}>
               Currently pursuing my <span className="text-teal-400 font-semibold">Ph.D. at IIIT Naya Raipur</span>, I'm passionate about pushing the boundaries 
               of next-generation wireless communication through <span className="text-teal-400 font-semibold">AI/ML-driven solutions</span>.
             </p>
@@ -119,12 +119,12 @@ const About = () => {
                     <span className={`${isMobile ? 'text-base' : 'text-xl'} text-teal-400`}>{stat.icon}</span>
                   </div>
                   <div className="flex-1">
-                    <div className={`font-bold text-white ${isMobile ? 'text-xl' : 'text-2xl md:text-3xl'} group-hover:text-teal-400 transition-colors duration-300`}>
+                    <div className={`font-bold text-white ${isMobile ? 'text-xl' : 'text-2xl md:text-3xl'} group-hover:text-teal-400 transition-colors duration-300 font-['Inter',serif]`}>
                       {stat.value}
                     </div>
                   </div>
                 </div>
-                <div className={`text-gray-200 ${isMobile ? 'text-sm' : 'text-base md:text-lg'} group-hover:text-white transition-colors duration-300 pl-10 sm:pl-13 relative z-10 font-medium`}>
+                <div className={`text-gray-200 ${isMobile ? 'text-sm' : 'text-base md:text-lg'} group-hover:text-white transition-colors duration-300 pl-10 sm:pl-13 relative z-10 font-medium font-['Inter',serif]`}>
                   {stat.label}
                 </div>
               </div>
@@ -155,7 +155,7 @@ const About = () => {
                   <div className={`transition-all duration-300 group-hover:scale-110 ${isMobile ? 'text-3xl' : 'text-4xl sm:text-5xl md:text-6xl'}`}>
                     {item.node}
                   </div>
-                  <span className={`font-medium text-gray-500 group-hover:text-gray-300 transition-colors whitespace-nowrap ${isMobile ? 'text-[10px]' : 'text-sm sm:text-base md:text-lg'}`}>
+                  <span className={`font-medium text-gray-500 group-hover:text-gray-300 transition-colors whitespace-nowrap font-['Inter',serif] ${isMobile ? 'text-[10px]' : 'text-sm sm:text-base md:text-lg'}`}>
                     {item.name}
                   </span>
                 </div>

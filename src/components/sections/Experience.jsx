@@ -37,21 +37,21 @@ const Experience = () => {
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white font-['Roboto_Slab',serif]">{exp.title}</h3>
-                 <p className="text-teal-500 text-base sm:text-lg mt-1 font-['Roboto_Slab',serif]">{exp.company}</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white font-['Inter',serif]">{exp.title}</h3>
+                 <p className="text-teal-500 text-base sm:text-lg mt-1 font-['Inter',serif]">{exp.company}</p>
                 </div>
-                <div className="flex items-center text-gray-500 text-sm">
+                <div className="flex items-center text-gray-500 text-sm font-['Inter',serif]">
                   <Calendar className="w-4 h-4 mr-1" />
                   <span>{exp.period}</span>
                 </div>
               </div>
-              <div className="flex items-center text-gray-500 text-sm mb-4">
+              <div className="flex items-center text-gray-500 text-sm mb-4 font-['Inter',serif]">
                 <MapPin className="w-4 h-4 mr-1" />
                 <span>{exp.location}</span>
               </div>
               <ul className="space-y-2">
                 {exp.responsibilities.map((resp, idx) => (
-                  <li key={idx} className="flex items-start text-gray-300 text-base sm:text-lg">
+                  <li key={idx} className="flex items-start text-gray-300 text-base sm:text-lg font-['Inter',serif]">
                     <Briefcase className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-teal-500" />
                     <span className="leading-relaxed">{resp}</span>
                   </li>

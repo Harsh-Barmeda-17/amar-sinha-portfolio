@@ -82,7 +82,7 @@ const Hero = () => {
 
           {/* Name with Hi, I'm - Single Line */}
           <div className="mb-4 sm:mb-5 flex flex-wrap justify-center items-baseline">
-            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-400 font-['Roboto_Slab',serif]">Hi, I'm </span>
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-400 font-['Inter',serif]">Hi, I'm </span>
             <BlurText
               text=" Amar Sinha"
               delay={150}
@@ -97,7 +97,7 @@ const Hero = () => {
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: 0.3 }}
-  className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4 font-['Roboto_Slab',serif]"
+  className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4 font-['Inter',serif]"
 >
   Innovative researcher specializing in{' '}
   <span className="text-teal-500 font-semibold">Beyond 5G Networks</span>
@@ -160,13 +160,13 @@ const Hero = () => {
           >
             <a
               href="#contact"
-              className="px-5 sm:px-6 py-2 sm:py-2.5 bg-teal-500 text-white rounded-lg text-sm sm:text-base font-medium hover:bg-teal-600 transition-colors"
+              className="px-5 sm:px-6 py-2 sm:py-2.5 bg-teal-500 text-white rounded-lg text-sm sm:text-base font-medium hover:bg-teal-600 transition-colors font-['Inter',serif]"
             >
               Get in Touch
             </a>
             <a
               href="/resume.pdf"
-              className="px-5 sm:px-6 py-2 sm:py-2.5 border border-gray-600 text-gray-300 rounded-lg text-sm sm:text-base font-medium hover:border-gray-400 hover:text-white transition-colors"
+              className="px-5 sm:px-6 py-2 sm:py-2.5 border border-gray-600 text-gray-300 rounded-lg text-sm sm:text-base font-medium hover:border-gray-400 hover:text-white transition-colors font-['Inter',serif]"
               target="_blank"
               rel="noopener noreferrer"
             >

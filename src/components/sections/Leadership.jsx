@@ -41,18 +41,18 @@ const Leadership = () => {
                   <div className="flex items-start gap-3">
                     <Users className="w-6 h-6 text-teal-500 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-semibold text-white font-['Roboto_Slab',serif]">{role.role}</h3>
-                      <p className="text-teal-500 text-base sm:text-lg mt-1">{role.organization}</p>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-white font-['Inter',serif]">{role.role}</h3>
+                      <p className="text-teal-500 text-base sm:text-lg mt-1 font-['Inter',serif]">{role.organization}</p>
                     </div>
                   </div>
-                  <div className="flex items-center text-gray-400 text-sm">
+                  <div className="flex items-center text-gray-400 text-sm font-['Inter',serif]">
                     <Calendar className="w-4 h-4 mr-1" />
                     <span>{role.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-2 mt-4">
                   {role.achievements.map((achievement, idx) => (
-                    <li key={idx} className="flex items-start text-gray-300 text-base sm:text-lg">
+                    <li key={idx} className="flex items-start text-gray-300 text-base sm:text-lg font-['Inter',serif]">
                       <TrendingUp className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-teal-500" />
                       <span className="leading-relaxed">{achievement}</span>
                     </li>
@@ -77,7 +77,7 @@ const Leadership = () => {
               {portfolioData.memberships.map((membership, index) => (
                 <div key={index} className="flex items-center p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-all">
                   <Award className="w-5 h-5 text-teal-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300 text-base sm:text-lg leading-relaxed">{membership}</span>
+                  <span className="text-gray-300 text-base sm:text-lg leading-relaxed font-['Inter',serif]">{membership}</span>
                 </div>
               ))}
             </div>

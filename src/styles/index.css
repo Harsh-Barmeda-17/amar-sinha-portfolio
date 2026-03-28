@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-black text-gray-300 font-['Roboto_Slab',serif];
+    @apply bg-black text-gray-300 font-['Inter','Roboto_Slab',serif];
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Inter', serif;
   }
 }
 
@@ -52,7 +54,6 @@
     transform: translateY(-5px);
   }
 }
-
 
 /* Subtle Teal Border Glow Animation */
 @keyframes borderGlow {

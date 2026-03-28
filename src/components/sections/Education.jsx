@@ -59,19 +59,19 @@ const Education = () => {
               {/* Content Card */}
               <div className="flex-1 bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl p-5 border border-gray-800 hover:border-teal-500/30 transition-all duration-300">
                 <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
-                  <h3 className="text-lg md:text-xl font-bold text-white font-['Roboto_Slab',serif]">{edu.degree}</h3>
-                  <div className="flex items-center gap-1 text-gray-400 text-sm">
+                  <h3 className="text-lg md:text-xl font-bold text-white font-['Inter',serif]">{edu.degree}</h3>
+                  <div className="flex items-center gap-1 text-gray-400 text-sm font-['Inter',serif]">
                     <Calendar className="w-3 h-3" />
                     <span>{edu.period}</span>
                   </div>
                 </div>
                 
-                <p className={`text-sm md:text-base ${colors[index % colors.length].text} mb-2 font-['Roboto_Slab',serif]`}>
+                <p className={`text-sm md:text-base ${colors[index % colors.length].text} mb-2 font-['Inter',serif]`}>
                   {edu.institution}
                 </p>
                 
                 {edu.cgpa && (
-                  <div className="flex items-center gap-1 text-gray-400 text-sm">
+                  <div className="flex items-center gap-1 text-gray-400 text-sm font-['Inter',serif]">
                     <Award className="w-3 h-3" />
                     <span>CGPA: {edu.cgpa}</span>
                   </div>
@@ -80,7 +80,7 @@ const Education = () => {
                 {edu.courses && (
                   <div className="mt-3 flex flex-wrap gap-2">
                     {edu.courses.map((course, idx) => (
-                      <span key={idx} className="text-xs px-2 py-0.5 bg-gray-800 rounded-full text-gray-400">
+                      <span key={idx} className="text-xs px-2 py-0.5 bg-gray-800 rounded-full text-gray-400 font-['Inter',serif]">
                         {course}
                       </span>
                     ))}

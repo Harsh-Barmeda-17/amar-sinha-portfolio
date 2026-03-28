@@ -40,7 +40,7 @@ const Publications = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-5 sm:px-6 py-2.5 rounded-lg text-sm sm:text-base font-medium transition-all font-['Roboto_Slab',serif] ${
+              className={`px-5 sm:px-6 py-2.5 rounded-lg text-sm sm:text-base font-medium transition-all font-['Inter',serif] ${
                 activeTab === tab.id
                   ? 'bg-teal-500 text-white'
                   : 'bg-gray-800 text-gray-400 hover:text-white border border-gray-700'
@@ -62,10 +62,10 @@ const Publications = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all"
             >
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 leading-relaxed font-['Roboto_Slab',serif]">{pub.title}</h3>
-              <p className="text-gray-400 text-sm sm:text-base mb-2">{pub.authors}</p>
-              <p className="text-gray-500 text-sm sm:text-base mb-3">{pub.journal}, {pub.year}</p>
-              <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 rounded-lg text-xs sm:text-sm font-medium">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 leading-relaxed font-['Inter',serif]">{pub.title}</h3>
+              <p className="text-gray-400 text-sm sm:text-base mb-2 font-['Inter',serif]">{pub.authors}</p>
+              <p className="text-gray-500 text-sm sm:text-base mb-3 font-['Inter',serif]">{pub.journal}, {pub.year}</p>
+              <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 rounded-lg text-xs sm:text-sm font-medium font-['Inter',serif]">
                 {pub.status}
               </span>
             </motion.div>
@@ -79,15 +79,15 @@ const Publications = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all"
             >
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 leading-relaxed">{pub.title}</h3>
-              <p className="text-gray-400 text-sm sm:text-base mb-2">{pub.authors}</p>
-              <p className="text-gray-500 text-sm sm:text-base mb-3">{pub.conference}, {pub.year}</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 leading-relaxed font-['Inter',serif]">{pub.title}</h3>
+              <p className="text-gray-400 text-sm sm:text-base mb-2 font-['Inter',serif]">{pub.authors}</p>
+              <p className="text-gray-500 text-sm sm:text-base mb-3 font-['Inter',serif]">{pub.conference}, {pub.year}</p>
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 rounded-lg text-xs sm:text-sm font-medium">
+                <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 rounded-lg text-xs sm:text-sm font-medium font-['Inter',serif]">
                   {pub.status}
                 </span>
                 {pub.citations && (
-                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-lg text-xs sm:text-sm font-medium">
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-lg text-xs sm:text-sm font-medium font-['Inter',serif]">
                     Cited by {pub.citations}
                   </span>
                 )}
@@ -103,9 +103,9 @@ const Publications = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gray-900 rounded-lg p-6 border border-gray-800 hover:border-gray-700 transition-all"
             >
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 leading-relaxed">{patent.title}</h3>
-              <p className="text-gray-400 text-sm sm:text-base mb-2">{patent.inventors}</p>
-              <p className="text-gray-500 text-sm sm:text-base">Application No: {patent.applicationNo}, {patent.year}</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 leading-relaxed font-['Inter',serif]">{patent.title}</h3>
+              <p className="text-gray-400 text-sm sm:text-base mb-2 font-['Inter',serif]">{patent.inventors}</p>
+              <p className="text-gray-500 text-sm sm:text-base font-['Inter',serif]">Application No: {patent.applicationNo}, {patent.year}</p>
             </motion.div>
           ))}
         </div>

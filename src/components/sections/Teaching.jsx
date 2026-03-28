@@ -41,10 +41,10 @@ const Teaching = () => {
             <div className="space-y-5">
               {portfolioData.teaching.undergraduate.map((course, index) => (
                 <div key={index} className="border-b border-gray-800 pb-4 last:border-0">
-                  <p className="text-lg sm:text-xl font-semibold text-teal-500 mb-1 font-['Roboto_Slab',serif]">
+                  <p className="text-lg sm:text-xl font-semibold text-teal-500 mb-1 font-['Inter',serif]">
                     {course.code}: {course.name}
                   </p>
-                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed font-['Inter',serif]">
                     {course.description}
                   </p>
                 </div>
@@ -66,10 +66,10 @@ const Teaching = () => {
             <div className="space-y-5">
               {portfolioData.teaching.postgraduate.map((course, index) => (
                 <div key={index} className="border-b border-gray-800 pb-4 last:border-0">
-                  <p className="text-lg sm:text-xl font-semibold text-teal-500 mb-1">
+                  <p className="text-lg sm:text-xl font-semibold text-teal-500 mb-1 font-['Inter',serif]">
                     {course.code}: {course.name}
                   </p>
-                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed font-['Inter',serif]">
                     {course.description}
                   </p>
                 </div>
